@@ -1,5 +1,5 @@
 <div class="app">
-  <ng-select
+  <ng-select class="sword-select"
   [items]="swordData"
   [(ngModel)]="swords"
   [multiple]="true"
@@ -7,11 +7,28 @@
   placeholder="Select"
   ></ng-select>
 
-  <div>Units:</div>
+  <button (click)="showAll()">Show All</button>
+
+  <div class="units">Units:</div>
   <input type="radio" id="metric" name="units" value="metric" [(ngModel)]="units" />
   <label for="metric">Metric</label>
   <input type="radio" id="imperial" name="units" value="imperial" [(ngModel)]="units" />
   <label for="imperial">Imperial</label>
+
+  <div class="sword-row info">
+    <div class="sword-name"></div>
+    <div class="sword-image">
+      <div class="sword-handle-container header" (click)="sort('handleLength')">Handle Length</div>
+      <div class="pob header" (click)="sort('pob')">Point of Balance</div>
+      <div class="sword-blade-container header" (click)="sort('bladeLength')">Blade Length</div>
+    </div>
+    <div class="sword-weight header" (click)="sort('totalWeight')">
+      Weight ({{ weightUnit }})
+    </div>
+    <div class="sword-price header" (click)="sort('price')">
+      Price
+    </div>
+  </div>
 
   <div *ngFor="let sword of swords" class="sword-row">
     <div class="sword-name">
@@ -46,10 +63,10 @@
       </div>
     </div>
     <div class="sword-weight">
-  
+      {{ (getWeight(sword.totalWeight) | number:'1.0-1')}}
     </div>
     <div class="sword-price">
-  
+      ${{ sword.price }}
     </div>
   </div>
 </div>

@@ -66,5 +66,15 @@
         "totalWeight": 1496,
         "price": 580,
         "imagePrefix": "fechterspiel"
+    },
+    {
+        "name": "VB Tournament",
+        "handleLength": 29,
+        "bladeLength": 98,
+        "pob": 8.4,
+        "totalWeight": 1400,
+        "flex": 12,
+        "price": 289,
+        "imagePrefix": "vb"
     }
 ]
