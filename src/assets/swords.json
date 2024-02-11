@@ -1,0 +1,70 @@
+[
+    {
+        "name": "SIGI Standard",
+        "handleLength": 33,
+        "bladeLength": 101,
+        "pob": 5.5,
+        "totalWeight": 1580,
+        "flex": 12.5,
+        "price": 355,
+        "imagePrefix": "sigi"
+    },
+    {
+        "name": "SIGI Shorty",
+        "handleLength": 29,
+        "bladeLength": 96,
+        "pob": 4.5,
+        "totalWeight": 1500,
+        "flex": 12.5,
+        "price": 355,
+        "imagePrefix": "sigi"
+    },
+    {
+        "name": "SIGI Mini",
+        "handleLength": 29,
+        "bladeLength": 86,
+        "pob": 3.5,
+        "totalWeight": 1400,
+        "flex": 12.5,
+        "price": 355,
+        "imagePrefix": "sigi"
+    },
+    {
+        "name": "Kvetun 1570",
+        "handleLength": 34,
+        "bladeLength": 100,
+        "pob": 3,
+        "totalWeight": 1643,
+        "price": 377,
+        "imagePrefix": "1570"
+    },
+    {
+        "name": "Regenyei",
+        "handleLength": 32,
+        "bladeLength": 100,
+        "totalWeight": 1460,
+        "flex": 13.5,
+        "price": 248,
+        "imagePrefix": "regenyei",
+        "pob": 8
+    },
+    {
+        "name": "Krieger Armory Arbiter",
+        "handleLength": 30,
+        "bladeLength": 99,
+        "totalWeight": 1500,
+        "flex": 10,
+        "price": 455,
+        "pob": 6.6,
+        "imagePrefix": "arbiter"
+    },
+    {
+        "name": "Arms & Armor Fechterspiel",
+        "handleLength": 27,
+        "bladeLength": 96,
+        "pob": 8.3,
+        "totalWeight": 1496,
+        "price": 580,
+        "imagePrefix": "fechterspiel"
+    }
+]

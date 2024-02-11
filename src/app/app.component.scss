@@ -1,0 +1,57 @@
+.app {
+  font-family: sans-serif;
+}
+
+.sword-row {
+  display: flex;
+  align-items: center;
+
+  .sword-name {
+    width: 200px;
+  }
+
+  .sword-image {
+    width: 1500px;
+    display: flex;
+
+    .sword-handle-container {
+      display: flex;
+      width: 400px;
+      justify-content: end;
+      align-items: center;
+
+      .sword-handle-image {
+        width: 400px;
+        height: 40px;
+      }
+    }
+
+    .sword-blade-container {
+      position: relative;
+
+      .sword-blade-image {
+        width: 1100px;
+        height: 250px;
+      }
+
+      .pob {
+        position: absolute;
+        top: calc(50% - 6px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 0 2px;
+
+        .pob-icon {
+          display: block;
+          width: 10px;
+          height: 10px;
+          background-color: black;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
