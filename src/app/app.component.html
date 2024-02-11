@@ -6,7 +6,13 @@
   bindLabel="name"
   placeholder="Select"
   ></ng-select>
-  
+
+  <div>Units:</div>
+  <input type="radio" id="metric" name="units" value="metric" [(ngModel)]="units" />
+  <label for="metric">Metric</label>
+  <input type="radio" id="imperial" name="units" value="imperial" [(ngModel)]="units" />
+  <label for="imperial">Imperial</label>
+
   <div *ngFor="let sword of swords" class="sword-row">
     <div class="sword-name">
       {{ sword.name }}
@@ -16,6 +22,11 @@
         <img class="sword-handle-image"
         [src]="'../assets/images/' + sword.imagePrefix + '_handle.png'"
         [style]="{ 'width': (sword.handleLength * 10)+'px' }" />
+
+        <div class="sword-handle-ruler"
+        [style]="{ 'width': (sword.handleLength * 10)+'px' }">
+          {{ (getLength(sword.handleLength) | number:'1.0-1') + lengthUnit }}
+        </div>
       </div>
   
       <div class="sword-blade-container">
@@ -23,9 +34,14 @@
         [src]="'../assets/images/' + sword.imagePrefix + '_blade.png'"
         [style]="{ 'width': (sword.bladeLength * 10)+'px' }" />
   
-        <div *ngIf="sword.pob" class="pob" [style]="{ 'left': (15 + sword.pob * 10)+'px' }">
-          <span class="pob-icon"></span>
-          <span>POB</span>
+        <div *ngIf="sword.pob" class="pob">
+          <span class="pob-icon" [style]="{ 'margin-left': (15 + sword.pob * 10)+'px' }"></span>
+          <span class="pob-text" [style]="{ 'margin-left': (15 + sword.pob * 10)+'px' }">{{ (getLength(sword.pob) | number:'1.0-1') + lengthUnit }}</span>
+        </div>
+
+        <div class="sword-blade-ruler"
+        [style]="{ 'width': (sword.bladeLength * 10 - 15)+'px' }">
+          {{ (getLength(sword.bladeLength) | number:'1.0-1') + lengthUnit }}
         </div>
       </div>
     </div>

@@ -5,9 +5,10 @@
 .sword-row {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 
   .sword-name {
-    width: 200px;
+    width: 150px;
   }
 
   .sword-image {
@@ -17,32 +18,57 @@
     .sword-handle-container {
       display: flex;
       width: 400px;
-      justify-content: end;
+      justify-content: flex-end;
       align-items: center;
+      position: relative;
 
       .sword-handle-image {
         width: 400px;
         height: 40px;
       }
+
+      .sword-handle-ruler {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        border-bottom: solid 2px black;
+        border-left: solid 2px black;
+        border-right: solid 2px black;
+      }
     }
 
     .sword-blade-container {
       position: relative;
+      line-height: 0;
 
       .sword-blade-image {
         width: 1100px;
         height: 250px;
       }
 
+      .sword-blade-ruler {
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        line-height:normal;
+        display: flex;
+        justify-content: center;
+        border-bottom: solid 2px black;
+        border-left: solid 2px black;
+        border-right: solid 2px black;
+      }
+
       .pob {
         position: absolute;
-        top: calc(50% - 6px);
+        top: calc(50% - 4px);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: white;
         padding: 0 2px;
+        line-height: normal;
 
         .pob-icon {
           display: block;
@@ -50,6 +76,10 @@
           height: 10px;
           background-color: black;
           border-radius: 50%;
+        }
+
+        .pob-text {
+          background-color: white;
         }
       }
     }
