@@ -37,7 +37,7 @@
     <div class="sword-image">
       <div class="sword-handle-container">
         <img class="sword-handle-image"
-        [src]="'../assets/images/' + sword.imagePrefix + '_handle.png'"
+        [src]="'assets/images/' + sword.imagePrefix + '_handle.png'"
         [style]="{ 'width': (sword.handleLength * 10)+'px' }" />
 
         <div class="sword-handle-ruler"
@@ -48,7 +48,7 @@
   
       <div class="sword-blade-container line-height-0">
         <img class="sword-blade-image"
-        [src]="'../assets/images/' + sword.imagePrefix + '_blade.png'"
+        [src]="'assets/images/' + sword.imagePrefix + '_blade.png'"
         [style]="{ 'width': (sword.bladeLength * 10)+'px' }" />
   
         <div *ngIf="sword.pob" class="pob">
